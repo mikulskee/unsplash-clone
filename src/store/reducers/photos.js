@@ -2,7 +2,8 @@ import * as actionTypes from '../actions/actionTypes';
 import { updateObject } from '../../shared/utility';
 
 const initialState = {
-	backgroundPhoto: null,
+	backgroundPhoto:
+		'https://images.unsplash.com/photo-1611701817991-1ff57844b995?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDU2MTF8MHwxfHJhbmRvbXx8fHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
 	loading: false,
 	error: null,
 };

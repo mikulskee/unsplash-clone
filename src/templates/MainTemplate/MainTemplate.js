@@ -5,9 +5,9 @@ import { connect } from 'react-redux';
 
 const MainTemplate = (props) => {
 	const { onGetBackgroundPhoto, backgroundPhotoURL } = props;
-	useEffect(() => {
-		onGetBackgroundPhoto();
-	}, []);
+	// useEffect(() => {
+	// 	onGetBackgroundPhoto();
+	// }, []);
 	return <Main backgroundPhotoURL={backgroundPhotoURL}></Main>;
 };
 
