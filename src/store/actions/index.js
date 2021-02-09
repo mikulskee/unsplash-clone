@@ -1,0 +1,1 @@
+export { getBackgroundPhoto } from './photos';
