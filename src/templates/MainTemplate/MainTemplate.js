@@ -1,14 +1,19 @@
 import React, { useEffect } from 'react';
-import { Main } from './MainTemplate.Styled';
+import { Cover, Main } from './MainTemplate.Styled';
 import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
+import Header from '../../components/Header/Header';
 
 const MainTemplate = (props) => {
 	const { onGetBackgroundPhoto, backgroundPhotoURL } = props;
 	// useEffect(() => {
 	// 	onGetBackgroundPhoto();
 	// }, []);
-	return <Main backgroundPhotoURL={backgroundPhotoURL}></Main>;
+	return (
+		<Main backgroundPhotoURL={backgroundPhotoURL}>
+			<Header />
+		</Main>
+	);
 };
 
 const mapStateToProps = (state) => {
