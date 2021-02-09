@@ -1,6 +1,7 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import createSagaMiddleware from 'redux-saga';
 import photosReducer from './store/reducers/photos';
+import { watchPhotos } from './store/sagas/index';
 
 const rootReducer = combineReducers({
 	photos: photosReducer,
@@ -12,6 +13,6 @@ const sagaMiddleware = createSagaMiddleware();
 
 const store = createStore(rootReducer, composeEnhancers(applyMiddleware(sagaMiddleware)));
 
-// sagaMiddleware.run(watchPhotos);
+sagaMiddleware.run(watchPhotos);
 
 export default store;

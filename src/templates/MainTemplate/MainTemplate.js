@@ -4,16 +4,22 @@ import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
 
 const MainTemplate = (props) => {
-	const { onGetBackgroundPhoto } = props;
+	const { onGetBackgroundPhoto, backgroundPhotoURL } = props;
 	useEffect(() => {
-		onGetBackgroundPhoto('photo');
-	});
-	return <Main></Main>;
+		onGetBackgroundPhoto();
+	}, []);
+	return <Main backgroundPhotoURL={backgroundPhotoURL}></Main>;
+};
+
+const mapStateToProps = (state) => {
+	return {
+		backgroundPhotoURL: state.photos.backgroundPhoto,
+	};
 };
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		onGetBackgroundPhoto: (photo) => dispatch(actions.getBackgroundPhoto(photo)),
+		onGetBackgroundPhoto: () => dispatch(actions.getBackgroundPhoto()),
 	};
 };
-export default connect(null, mapDispatchToProps)(MainTemplate);
+export default connect(mapStateToProps, mapDispatchToProps)(MainTemplate);

@@ -1,1 +1,6 @@
-export { getBackgroundPhoto } from './photos';
+export {
+	getBackgroundPhotoSuccess,
+	getBackgroundPhotoError,
+	getBackgroundPhotoStart,
+	getBackgroundPhoto,
+} from './photos';
