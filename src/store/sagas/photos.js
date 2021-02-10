@@ -13,7 +13,7 @@ export function* getBackgroundPhoto() {
 }
 export function* getPhotosByQuerySaga(action) {
 	const { query } = action;
-	yield put(actions.getPhotosByQueryStart());
+	yield put(actions.getPhotosByQueryStart(query));
 	try {
 		const response = yield axios.get(`/search/photos`, {
 			params: {

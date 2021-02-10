@@ -3,10 +3,12 @@ import { Button, Form, Input } from './SearchBar.Styled';
 import { ReactComponent as SearchIcon } from '../../assets/icons/search-solid.svg';
 import * as actions from '../../store/actions/index';
 import { connect } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const SearchBar = (props) => {
 	const { onGetPhotosByQuery } = props;
 	const formRef = useRef(null);
+	const history = useHistory();
 
 	const [isFocused, setIsFocused] = useState(false);
 	const [inputValue, setInputValue] = useState('');
@@ -22,6 +24,7 @@ const SearchBar = (props) => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		onGetPhotosByQuery(inputValue);
+		history.push('/search');
 	};
 	return (
 		<Form ref={formRef} isFocused={isFocused} onSubmit={handleSubmit}>

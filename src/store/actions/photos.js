@@ -29,9 +29,10 @@ export const getBackgroundPhotoStart = () => {
 		type: actionTypes.GET_BACKGROUND_PHOTO_START,
 	};
 };
-export const getPhotosByQueryStart = () => {
+export const getPhotosByQueryStart = (query) => {
 	return {
 		type: actionTypes.GET_PHOTOS_BY_QUERY_START,
+		query,
 	};
 };
 export const getBackgroundPhoto = () => {
