@@ -24,7 +24,7 @@ export const Form = styled.form`
 
 	border: ${({ isFocused }) =>
 		isFocused ? '6px solid rgba(255,255,255,0.2)' : '6px solid rgba(0,0,0,0)'};
-	margin: ${({ template }) => template === 'search' && '0 auto'};
+	margin: ${({ template }) => template === 'search' && '0 auto 40px'};
 `;
 
 export const Input = styled.input`
