@@ -4,3 +4,4 @@ export {
 	getBackgroundPhotoStart,
 	getBackgroundPhoto,
 } from './photos';
+export { getTopicsList } from './topics';
