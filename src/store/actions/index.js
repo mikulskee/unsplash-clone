@@ -3,5 +3,8 @@ export {
 	getBackgroundPhotoError,
 	getBackgroundPhotoStart,
 	getBackgroundPhoto,
+	getPhotosByQuery,
+	getPhotosByQueryError,
+	getPhotosByQueryStart,
+	getPhotosByQuerySuccess,
 } from './photos';
-export { getTopicsList } from './topics';

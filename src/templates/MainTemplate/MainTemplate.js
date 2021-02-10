@@ -5,14 +5,11 @@ import { connect } from 'react-redux';
 import Header from '../../components/Header/Header';
 
 const MainTemplate = (props) => {
-	const { onGetBackgroundPhoto, onGetTopicsList, backgroundPhotoURL } = props;
+	const { onGetBackgroundPhoto, backgroundPhotoURL } = props;
 	// useEffect(() => {
 	// 	onGetBackgroundPhoto();
 	// }, []);
 
-	useEffect(() => {
-		// onGetTopicsList();
-	});
 	return (
 		<Main backgroundPhotoURL={backgroundPhotoURL}>
 			<Header />
@@ -29,7 +26,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onGetBackgroundPhoto: () => dispatch(actions.getBackgroundPhoto()),
-		onGetTopicsList: () => dispatch(actions.getTopicsList()),
 	};
 };
 export default connect(mapStateToProps, mapDispatchToProps)(MainTemplate);
