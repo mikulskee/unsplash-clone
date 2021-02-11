@@ -4,6 +4,7 @@ import SearchBar from '../../components/SearchBar/SearchBar';
 import { useHistory } from 'react-router-dom';
 import { SearchTemplateWrapper } from './SearchTemplate.Styled';
 import PhotoGrid from '../../components/PhotoGrid/PhotoGrid';
+import PhotoModal from '../../components/PhotoModal/PhotoModal';
 
 const SearchTemplate = (props) => {
 	const history = useHistory();
@@ -25,6 +26,12 @@ const SearchTemplate = (props) => {
 					src: photo.urls.small,
 					width: photo.width,
 					height: photo.height,
+					photoRegular: photo.urls.regular,
+					author: photo.user.name,
+					authors_instagram: photo.user.instagram_username,
+					authors_avatar: photo.user.profile_image.small,
+					place: photo.user.location,
+					alt_description: photo.alt_description,
 				}))
 			);
 		}
@@ -32,9 +39,10 @@ const SearchTemplate = (props) => {
 	return (
 		<SearchTemplateWrapper>
 			<SearchBar template="search" />
-			<h1 style={{ color: 'black' }}>{query}</h1>
+			<h1 style={{ color: 'black', marginBottom: '20px' }}>{query}</h1>
 
 			{photosData && <PhotoGrid photosData={photosData} />}
+			<PhotoModal />
 		</SearchTemplateWrapper>
 	);
 };

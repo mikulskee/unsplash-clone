@@ -46,3 +46,9 @@ export const getPhotosByQuery = (query) => {
 		query,
 	};
 };
+export const setPhotoInformation = (photoInformation) => {
+	return {
+		type: actionTypes.SET_PHOTO_INFORMATION,
+		photoInformation,
+	};
+};

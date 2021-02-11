@@ -7,4 +7,5 @@ export {
 	getPhotosByQueryError,
 	getPhotosByQueryStart,
 	getPhotosByQuerySuccess,
+	setPhotoInformation,
 } from './photos';

@@ -8,6 +8,7 @@ const initialState = {
 	error: null,
 	queryPhotosList: null,
 	query: null,
+	photoInformation: null,
 };
 
 const getBackgroundPhotoSuccess = (state, action) => {
@@ -28,7 +29,9 @@ const getBackgroundPhotoError = (state, action) => {
 const getPhotosByQueryError = (state, action) => {
 	return updateObject(state, { error: action.error });
 };
-
+const setPhotoInformation = (state, action) => {
+	return updateObject(state, { photoInformation: action.photoInformation });
+};
 const reducer = (state = initialState, action) => {
 	switch (action.type) {
 		case actionTypes.GET_BACKGROUND_PHOTO_SUCCESS:
@@ -43,6 +46,8 @@ const reducer = (state = initialState, action) => {
 			return getBackgroundPhotoError(state, action);
 		case actionTypes.GET_PHOTOS_BY_QUERY_ERROR:
 			return getPhotosByQueryError(state, action);
+		case actionTypes.SET_PHOTO_INFORMATION:
+			return setPhotoInformation(state, action);
 		default:
 			return state;
 	}
