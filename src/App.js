@@ -5,7 +5,7 @@ import SearchTemplate from './templates/SearchTemplate/SearchTemplate';
 
 const App = () => {
 	return (
-		<Router>
+		<Router basename={process.env.PUBLIC_URL}>
 			<Switch>
 				<Route path="/" exact>
 					<MainTemplate />
