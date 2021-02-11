@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/unsplash-clone/static/js/main.d752bf88.chunk.js",
-    "main.js.map": "/unsplash-clone/static/js/main.d752bf88.chunk.js.map",
+    "main.js": "/unsplash-clone/static/js/main.e679ff9e.chunk.js",
+    "main.js.map": "/unsplash-clone/static/js/main.e679ff9e.chunk.js.map",
     "runtime-main.js": "/unsplash-clone/static/js/runtime-main.6bc1cf7f.js",
     "runtime-main.js.map": "/unsplash-clone/static/js/runtime-main.6bc1cf7f.js.map",
     "static/js/2.ab791c44.chunk.js": "/unsplash-clone/static/js/2.ab791c44.chunk.js",
@@ -14,6 +14,6 @@
   "entrypoints": [
     "static/js/runtime-main.6bc1cf7f.js",
     "static/js/2.ab791c44.chunk.js",
-    "static/js/main.d752bf88.chunk.js"
+    "static/js/main.e679ff9e.chunk.js"
   ]
 }
