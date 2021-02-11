@@ -23,8 +23,10 @@ const SearchBar = (props) => {
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		onGetPhotosByQuery(inputValue);
-		history.push('/search');
+		if (inputValue !== '') {
+			onGetPhotosByQuery(inputValue);
+			history.push('/search');
+		}
 	};
 
 	useEffect(() => {
