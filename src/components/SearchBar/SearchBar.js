@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 
 const SearchBar = (props) => {
-	const { onGetPhotosByQuery, template, query } = props;
+	const { onGetPhotosByQuery, template, query, onGetAutocompleteData } = props;
 	const formRef = useRef(null);
 	const history = useHistory();
 
@@ -19,6 +19,7 @@ const SearchBar = (props) => {
 
 	const handleInputChange = (e) => {
 		setInputValue(e.target.value);
+		onGetAutocompleteData(e.target.value);
 	};
 
 	const handleSubmit = (e) => {
@@ -60,6 +61,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
 	return {
 		onGetPhotosByQuery: (query) => dispatch(actions.getPhotosByQuery(query)),
+		onGetAutocompleteData: (text) => dispatch(actions.getAutocompleteData(text)),
 	};
 };
 

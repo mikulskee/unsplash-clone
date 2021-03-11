@@ -8,4 +8,5 @@ export {
 	getPhotosByQueryStart,
 	getPhotosByQuerySuccess,
 	setPhotoInformation,
+	getAutocompleteData,
 } from './photos';

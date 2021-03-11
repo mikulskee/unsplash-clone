@@ -52,3 +52,9 @@ export const setPhotoInformation = (photoInformation) => {
 		photoInformation,
 	};
 };
+export const getAutocompleteData = (text) => {
+	return {
+		type: actionTypes.GET_AUTOCOMPLETE,
+		text,
+	};
+};
